@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+}
+
+.container_master{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #b63df9 100%);
+    height: 100%;
+    width: 100%;
+}
+
+.menu_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+}
+
+.menu_content li{
+    list-style-type: none;
+    position: absolute;
+    transform-origin: 10rem;
+    border-radius: 50%;
+    left: 0;
+    transition: .7s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(8.2rem);
+    cursor: pointer;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.menu_content li a{
+    font-size: 1.5rem;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+
+.menu_content a:hover{
+    filter: drop-shadow(0 0 15px azure) drop-shadow(0 0 50px azure);
+}
+
+
+.MenuAtivo li{
+    transform: rotate(calc(360deg / 8 * var(--i)));
+}
+
+
+
+.toggle{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;    
+    transition: transform 1.4s;
+}
+
+.toggle i{
+    width: 100%;
+    height: 100%;
+    font-size: 3.1rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    background-color:azure;
+    border-radius: 50%;
+}
+
+.toggle i:hover{
+    filter: drop-shadow(0 0 15px rgba(240, 255, 255, 0.795)) drop-shadow(0 0 50px rgba(240, 255, 255, 0.795));   
+}
+
+
+.BtnAtivado{
+    transform: rotate(315deg)
+}
